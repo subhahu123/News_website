@@ -11,7 +11,8 @@
         }
 
         #news {
-            margin:0px 30%;
+            margin:0px auto;
+            padding: 10px 25%;
         }
 
         .row {
@@ -36,7 +37,7 @@
 
 
     <script>
-    fetch('https://newsapi.org/v2/top-headlines?sources=google-news&apiKey=92f462c3f354489baef3732e89149bcb')
+    fetch('https://newsapi.org/v2/top-headlines?sources=google-news-in&apiKey=92f462c3f354489baef3732e89149bcb')
         .then( res => res.json() )
         .then( out => {
             document.querySelector('#total').innerHTML = ` <h3>Top ${out.totalResults} News</h3> `;
